@@ -1,4 +1,4 @@
-![well-maasai-tanzania-1500x630.jpeg](attachment:well-maasai-tanzania-1500x630.jpeg)
+![Well Maasai Tanzania](./images/well-maasai-tanzania-1500x630.jpeg)
 
 # Tanzania Waterpoint Functionality Classification using Random Forest
 
@@ -36,6 +36,6 @@ A breakdown of the `status_group` class frequencies show that this dataset has s
 
 #### `longitude`
 
-![]
+![Longitude Distribution](./images/longitude.png)
 
 The minimum `longitude` in this dataset is 0. Realistically, longitudes for Tanzania should be in the 29-40 range, and definitely should not be lower than 28. Therefore, these 0 values in `longitude` are most likely placeholders, and should be treated as missing values later on.
