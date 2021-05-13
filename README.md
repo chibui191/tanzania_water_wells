@@ -52,8 +52,9 @@ The model built in this project could be utilized as one of the first steps in t
 
 The dataset provided on https://www.drivendata.org/ by **Taarifa** and the **Tanzanian Ministry of Water**. More details on the competition could be found [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/23/).
 
-Please note that for the actual competition, the use of external data is not allowed. However, I did incorporate data from 2 external sources in my own analysis project. 
-
+Please note that for the actual competition, the use of external data is not allowed. However, I did incorporate data from 2 external sources below in my own analysis project: 
+- https://simplemaps.com/data/tz-cities
+- https://worldpopulationreview.com/countries/cities/tanzania
 
 
 ## Exploratory Data Analysis (EDA)
@@ -112,7 +113,7 @@ In addition to this, one of the few things that can caused well water contaminat
 
 ![Proportion of Well Functionality Statuses Grouped by Quantity](./images/stacked_quality.jpg)
 
-Again, similar to `quantity`, the percentage of `non functional` in the **unknown** group is a lot higher than the others.
+One interesting thing we can see here is the percentage of `non functional` in the **unknown** group is a lot higher than the others.
 
 #### `extraction_type`
 
@@ -198,7 +199,7 @@ The proportions of well functionality in **rainwater harvesting** has led me to 
 
 I think it's not coincident that **June** appears to record the highest amount of `functional` wells, and lowest amount of **dry** wells. Although Tanzania is a very big country, and the climate does vary considerably within it, generally, the main long rainy season lasts during **March**, **April**, and **May**.  
 
-Overall, this EDA has shown that there are certainly values in the **`unknown`**s and **`other`**s of this dataset. Therefore, for all the categorical variables with missing values to be included in modeling, I will impute them with the string **`"NaN"`** instead of dropping them.
+Overall, this EDA has shown that there are certainly values in the `unknown`s and `other`s of this dataset. Therefore, for all the categorical variables with missing values to be included in modeling, I will impute them with the string **`"NaN"`** instead of dropping them.
 
 
 
@@ -494,7 +495,7 @@ Based on this inferential Random Forest model `rf2`, the top 10 most important f
 9. `quantity_enough`
 10. `extraction_type_class_other`
 
-This results show that the location (`longitude`/`latitude`) of the waterpoints do contribute to their functionality signficantly. This could be due to various reasons, from natural climate, and or something more human-induced such as the lack of funding and/or maintenance executed by different entities in different regions.
+This results show that the location (`longitude`/`latitude`) of the waterpoints do contribute to their functionality signficantly. This could be due to various reasons, from natural climate, to something more human-induced such as the lack of funding and/or maintenance in certain regions.
 
 And then we have the distance to nearest big city (with population over 100,000), which is one of the 3 additional features I created using external sources of data. 
 
@@ -714,7 +715,7 @@ functional needs repair       0.46      0.32      0.38      1083
 
 ![Models Confusion Matrix Comparison](./images/confusion_matx_comparison.jpg)
 
-We can see that the Competition Model was able to achieve a higher Accuracy by generating more of the `functional` labels, which is the major class in the actual population. To put things in perspective, out of a sample of 14,481 datapoints, the competition model predicted 1,662 non-operational (including both `non functional` and `functional needs repair`) as `functional`, while the inferential model classified 1,563 non-operational as `functional`. With an average population size of 180 people living around 1 waterpoint, a difference of 100 datapoints could mean that the lives of around 180,000 would be affected.
+We can see that the Competition Model was able to achieve a higher Accuracy by generating more of the `functional` labels, which is the major class in the actual population. To put things in perspective, out of a sample of 14,481 datapoints, the competition model predicted 1,662 non-operational (including both `non functional` and `functional needs repair`) as `functional`, while the inferential model classified 1,563 non-operational as `functional`. With an average population size of 180 people living around 1 waterpoint, a difference of 100 datapoints could mean that the lives of around 180,000 would be affected. Therefore between the 2 models, I strongly believe that the Inferential version could offer more values despite lower overall accuracy.
 
 The inferential model is also easier to interpret; as it provides us with more insights into what could be done to improve the functionality and quality of water pumps. It has helped weed out some variables such as `basin` and `region`, and shift our focus to `extraction_type_class`, `waterpoint_type`, `payment_type`, etc, which can all be monitored, controlled, and improved upon by human. 
 
