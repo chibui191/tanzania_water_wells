@@ -34,8 +34,8 @@ functional needs repair    0.07267
 
 A breakdown of the `status_group` class frequencies show that this dataset has some class imbalances that would have to be addressed during modeling. Although this is a **ternary** dataset, one class `"functional"` takes up 54.30% of the whole training dataset, while `"functional needs repair"` is only 7.27%.
 
-#### `longitude`
+#### Geospatial data vs `status_group`
 
-![Longitude Distribution](./images/longitude.png)
+![Waterpoint Location with Functionality & Altitude Encoded](./images/geospatial_scatter.jpg)
 
 The minimum `longitude` in this dataset is 0. Realistically, longitudes for Tanzania should be in the 29-40 range, and definitely should not be lower than 28. Therefore, these 0 values in `longitude` are most likely placeholders, and should be treated as missing values later on.
