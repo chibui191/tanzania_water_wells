@@ -90,15 +90,15 @@ Again, similar to `quantity`, the percentage of `non functional` in the **unknow
 #### `waterpoint_type`
 
 ```
-status_group	functional	functional needs repair	non functional
-waterpoint_type			
-dam	0.857143	0.000000	0.142857
-cattle trough	0.724138	0.017241	0.258621
-improved spring	0.717752	0.108557	0.173691
-communal standpipe	0.621476	0.079219	0.299306
-hand pump	0.617714	0.058800	0.323486
-communal standpipe multiple	0.366290	0.106247	0.527464
-other	0.131723	0.045946	0.822330
+| waterpoint_type             |   functional |   functional needs repair |   non functional |
+|:----------------------------|-------------:|--------------------------:|-----------------:|
+| dam                         |     0.857143 |                 0         |         0.142857 |
+| cattle trough               |     0.724138 |                 0.0172414 |         0.258621 |
+| improved spring             |     0.717752 |                 0.108557  |         0.173691 |
+| communal standpipe          |     0.621476 |                 0.0792187 |         0.299306 |
+| hand pump                   |     0.617714 |                 0.0588    |         0.323486 |
+| communal standpipe multiple |     0.36629  |                 0.106247  |         0.527464 |
+| other                       |     0.131723 |                 0.0459464 |         0.82233  |
 ```
 
 ![Well Functionality Status by Waterpoint Type](./images/stacked_wpt_type.jpg)
