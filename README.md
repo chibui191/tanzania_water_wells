@@ -158,8 +158,8 @@ One interesting thing we can see here is the percentage of `non functional` in t
 
 ![Well Functionality Status by Water Source](./images/stacked_source.jpg)
 
-- There are a significant amount of wells in the **shallow well**; and the percentage of `non functional` in this group is higher than average (44.8% compared to 38%).
-- **rainwater harvesting** does not have too many wells, yet the percentage of `functional` well here is relatively high (60% compare to the average of 53%).
+- The percentage of `non functional` in **shallow well** is higher than average (44.8% compared to 38%).
+- **spring** and **rainwater harvesting** both have higher percentages of `functional` wells (62% and 60% compare to the average of 53%).
 
 #### `date_recorded`
 
@@ -549,7 +549,7 @@ functional needs repair       0.94      0.99      0.97      2412
            weighted avg       0.99      0.99      0.99     33392
 ```
 
-Classification Report on the Training dataset:
+Classification Report on the Validation dataset:
 
 ```
                          precision    recall  f1-score   support
