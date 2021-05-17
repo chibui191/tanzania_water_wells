@@ -207,7 +207,7 @@ Overall, this EDA has shown that there are certainly values in the `unknown`s an
 
 ### Metrics
 
-The main metric that I would be using to access my models' performance here is **Accuracy Score**. However, for this specific problem, we would also want to be able to identify non-operational waterpoints as well as those that are in need of repair early on, to help the Tanzanian Ministry of Water dispense resources and labors accordingly. Therefore, I would also be looking at **Recall Score** particularly of the 2 classes `non functional` and `functional needs repair` in evaluating my models.
+The main metric that I would be using to assess my models' performance here is **Accuracy Score**. However, for this specific problem, we would also want to be able to identify non-operational waterpoints as well as those that are in need of repair early on, to help the Tanzanian Ministry of Water dispense resources and labors accordingly. Therefore, I would also be looking at **Recall Score** particularly of the 2 classes `non functional` and `functional needs repair` in evaluating my models.
 
 ### Train Test Split
 
